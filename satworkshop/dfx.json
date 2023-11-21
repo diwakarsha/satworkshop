@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "satworkshop_backend": {
+      "main": "src/satworkshop_backend/main.mo",
+      "type": "motoko"
+    },
+    "satworkshop_frontend": {
+      "dependencies": [
+        "satworkshop_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/satworkshop_frontend/src/index.html"
+      },
+      "source": [
+        "src/satworkshop_frontend/assets",
+        "dist/satworkshop_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
